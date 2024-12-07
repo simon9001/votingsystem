@@ -39,10 +39,10 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
-    export VIRTUAL_ENV=$(cygpath "D:\OnlineVoting-Django\venv")
+    export VIRTUAL_ENV=$(cygpath "D:\creative\OnlineVoting-Django - Copy\venv")
 else
     # use the path as-is
-    export VIRTUAL_ENV="D:\OnlineVoting-Django\venv"
+    export VIRTUAL_ENV="D:\creative\OnlineVoting-Django - Copy\venv"
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
