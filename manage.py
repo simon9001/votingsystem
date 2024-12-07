@@ -20,16 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-from pyngrok import ngrok
-
-if __name__ == "__main__":
-    # Start ngrok tunnel
-    public_url = ngrok.connect(8000).public_url
-    print(f"ngrok tunnel available at: {public_url}")
-
-    # Add to ALLOWED_HOSTS dynamically
-    from django.conf import settings
-    settings.ALLOWED_HOSTS.append(public_url.split("//")[1])
-
-    # Run Django server
-    execute_from_command_line(sys.argv)
